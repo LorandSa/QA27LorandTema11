@@ -10,6 +10,7 @@ public class Main
 
         LogicalOp Logical = new LogicalOp();
         Logical.Shownumber();
+        Logical.TextComparison();
 
     }
 }

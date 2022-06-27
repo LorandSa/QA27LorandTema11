@@ -12,21 +12,10 @@ public class LogicalOp
         int secondNumber = OperatiiLogice.nextInt();
 
         if (firstNumber > secondNumber)
-        {
+        {return firstNumber;}
+        else
+        {return secondNumber;}
 
-            return firstNumber;
-
-        } else
-        {
-
-            return secondNumber;
-
-        }
-
-    }
-    public void Shownumber()
-    {
-        System.out.println("Numarul mai mare este: "+CheckBiggerNumber());
     }
     public String TextComparison()
     {
@@ -35,15 +24,19 @@ public class LogicalOp
         String first = OperatiiLogice.next();
         System.out.println("Introduceti al doilea text din comparatie:");
         String second = OperatiiLogice.next();
-        if ( first.equals(second) ) {
 
-            System.out.println("Sunt la fel!");
-
-        } else if ( !first.equals(second) ) {
-
-            System.out.println("Nu sunt la fel!");
-
-        }
+        if ( first.equals(second) ) {System.out.println("Sunt la fel!");}
+        else {System.out.println("Nu sunt la fel!");}
         return TextComparison();
     }
+    public String verifyTextAndNumber(String textInput, int number) {
+
+        if (textInput.equals("FastTrack") && number <= 3) {
+            return (textInput + number);
+        } else if (!textInput.equals("FastTrack") && number >= 4) {
+            return (number + textInput);
+        }
+        return "Not applicable";
+    }
+
 }

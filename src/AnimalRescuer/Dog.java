@@ -7,6 +7,9 @@ public class Dog {
     String color = "Grey";
     double weight = 10.5;
     int heightCm = 20;
+    int health = 8;
+    String favFood = "Bone";
+
 
     public void eat(){
         System.out.println("eating dog food");

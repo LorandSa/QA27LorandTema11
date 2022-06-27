@@ -7,5 +7,8 @@ public class AppMain {
         System.out.println(gicu.name);
         gicu.play();
 
+        Adopter Patrick = new Adopter();
+        Patrick.adopt();
+
     }
 }

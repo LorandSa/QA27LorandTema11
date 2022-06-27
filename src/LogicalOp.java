@@ -38,5 +38,50 @@ public class LogicalOp
         }
         return "Not applicable";
     }
+    public void printToHundred(int x){
+        for (int i =x;i<=20;i++){
+            System.out.println(i);
+        }
+    }
+
+    public double avgToHundred(int x){
+        int sum=0;
+        for (int i=1;i<=100;i++){
+            sum+=i;
+            System.out.println(x);
+        }
+        return sum/100d;
+
+    }
+    public int decrease(int x,int y){
+        int a = x;
+         for (a=x;a>=y;y--){
+               System.out.println(a);
+        }
+         return a;
+    }
+     public double getAvgInterval(int start, int finish){
+
+        int sum = 0;
+        double count = 0;
+
+        while(start<=finish){
+            sum+=start;
+            start++;
+            count++;
+        }
+        return sum/count;
+     }
+
+     public double getAvgForEvenInterval(int start,int finish){
+        int sum = 0;
+         double count = 0;
+         while(start<=finish){
+             if (start % 2 == 0){
+                 sum+=start;
+                 count++;
+             }start++;
+         }return sum/count;
+     }
 
 }

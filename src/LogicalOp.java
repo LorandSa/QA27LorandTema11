@@ -39,7 +39,12 @@ public class LogicalOp
         return "Not applicable";
     }
     public void printToHundred(int x){
-        for (int i =x;i<=20;i++){
+        for (int i=x;i<=100;i++){
+            System.out.println(i);
+        }
+    }
+    public void printToMinusHundred(int x){
+        for (int i=x;i>=-100;i--){
             System.out.println(i);
         }
     }
@@ -53,12 +58,16 @@ public class LogicalOp
         return sum/100d;
 
     }
-    public int decrease(int x,int y){
-        int a = x;
-         for (a=x;a>=y;y--){
-               System.out.println(a);
+    public void decrease(int x,int y){
+        if (x>y){
+        for (int a=x;a>=y&&x>=y;x--){
+               System.out.println(x);
         }
-         return a;
+        }else {
+            for (int a=x;a<=y&&y>=x;x++){
+                System.out.println(x);
+            }
+        }
     }
      public double getAvgInterval(int start, int finish){
 

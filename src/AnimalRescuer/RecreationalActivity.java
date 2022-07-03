@@ -1,5 +1,7 @@
 package AnimalRescuer;
 
 public class RecreationalActivity {
-    String activity = "Running";
+    private String activity = "Running";
+    public String getActivity(){return activity;}
+    public void setActivity(String newActivity){this.activity = newActivity;}
 }

@@ -58,7 +58,7 @@ public class LogicalOp
         return sum/100d;
 
     }
-    public void decrease(int x,int y){
+    public void showNumbersBetween(int x,int y){
         if (x>y){
         for (int a=x;a>=y&&x>=y;x--){
                System.out.println(x);
@@ -69,17 +69,39 @@ public class LogicalOp
             }
         }
     }
-     public double getAvgInterval(int start, int finish){
+
+        public void showOddNumbers(){
+        int number=100;
+        System.out.print("List of odd numbers from 1 to "+number+": ");
+        for (int i=1; i<=number; i++)
+        {
+            if (i%2!=0)
+            {
+                System.out.print(i + " ");
+            }
+        }
+    }
+        public void showEvenNumbers(){
+        int number=100;
+        System.out.print("List of even numbers from 1 to "+number+": ");
+        for (int i=1; i<=number; i++)
+        {
+            if (i%2==0)
+            {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+        public double getIntervalSum(int start){
 
         int sum = 0;
-        double count = 0;
 
-        while(start<=finish){
+        while(start<=100){
             sum+=start;
             start++;
-            count++;
         }
-        return sum/count;
+        return sum;
      }
 
      public double getAvgForEvenInterval(int start,int finish){

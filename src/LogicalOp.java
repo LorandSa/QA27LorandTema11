@@ -114,5 +114,33 @@ public class LogicalOp
              }start++;
          }return sum/count;
      }
+    public void countToHundred(int start){
+
+        while(start<100){
+            start+=1;
+            System.out.println(start);
+        }
+    }
+    public void countToMinusHundred(int start){
+
+        while(start>-100){
+            start-=1;
+            System.out.println(start);
+        }
+    }
+    public void fibonacciSeries(){
+        int i = 1, n = 20, firstTerm = 0, secondTerm = 1;
+        System.out.println("Sirul Fibonacci pana la: " + n);
+
+        while (i <= n) {
+            System.out.print(firstTerm + ", ");
+
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+
+            i++;
+        }
+    }
 
 }

@@ -142,5 +142,69 @@ public class LogicalOp
             i++;
         }
     }
+    public void wozaCozaLoza() {
+        int i = 1;
+        while (i <= 110) {
+            if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
+                System.out.print("CozaLozaWoza ");
+            } else if (i % 5 == 0 && i % 7 == 0) {
+                System.out.print("WozaLoza ");
+            } else if (i % 3 == 0 && i % 7 == 0) {
+                System.out.print("CozaWoza ");
+            } else if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print("CozaLoza ");
+            } else if (i % 7 == 0) {
+                System.out.print("Woza ");
+            } else if (i % 5 == 0) {
+                System.out.print("Loza ");
+            } else if (i % 3 == 0) {
+                System.out.print("Coza ");
+            } else {
+                System.out.print(i + " ");
+            }
+            if (i % 11 == 0) {
+                System.out.println();
+            }
+            i++;
+        }
+    }
+    public void printPattern() {
+        for (int j = 7; j >= 1; j--) {
+            String text = "";
+            for (int i = j; i >= 1; i--) {
+                text = text + "*";
+            }
+            System.out.println(text);
+        }
+    }
+    public int[] populateArrayUpToNumber(int number){
+        int[] array = new int[number];
+            for (int i=0; i<array.length; i++){
+                array[i]=i+1;
+        }return array;
+    }
+    public double getAverageFromArray(int[] array) {
+        double sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum / array.length;
+    }
+    public boolean isValueInArray(String[] array, String value) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(value)) {
+                return true;
+            }
+        }return false;
+    }
+    public int[] getSumOfEvensAndOdds(int[] input) {
 
+        int x[] = input;
+        int even = 0;
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] % 2 == 0)
+                even += x[i];
+        }
+        return x;
+    }
 }

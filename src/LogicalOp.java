@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class LogicalOp
@@ -206,5 +207,25 @@ public class LogicalOp
                 even += x[i];
         }
         return x;
+    }
+
+    public void printNumbersBackwardsFromList(List<Integer> myList){
+        for (int i = myList.size()-1;i>=0;i--){
+            System.out.println(myList.get(i));
+        }
+    }
+    public void twoParameters(List<Integer> myList,int a){
+          myList.add(a);
+        System.out.println(myList);
+    }
+    public void printNumbersFromList(List<Integer> myList){
+        for (int i=0;i<100;i++){
+            System.out.println(myList.get(i));
+        }
+    }
+    public void twoParametersFromList(List<Integer> myList,int a){
+        for (int i=a-1;i<100;i++) {
+            System.out.println(myList.get(i));
+        }
     }
 }

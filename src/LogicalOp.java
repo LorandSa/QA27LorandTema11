@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -178,11 +179,33 @@ public class LogicalOp
             System.out.println(text);
         }
     }
+
+    /////////////// LAB 13
     public int[] populateArrayUpToNumber(int number){
         int[] array = new int[number];
             for (int i=0; i<array.length; i++){
                 array[i]=i+1;
         }return array;
+    }
+    public int[] getEvenArrayToHundred(int[] evenArray) {
+        int j = 0;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                evenArray[j] = i;
+                j++;
+            }
+        }
+        return evenArray;
+    }
+    public int[] getSumOfEvensAndOdds(int[] input) {
+
+        int x[] = input;
+        int even = 0;
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] % 2 == 0)
+                even += x[i];
+        }
+        return x;
     }
     public double getAverageFromArray(int[] array) {
         double sum = 0;
@@ -198,17 +221,56 @@ public class LogicalOp
             }
         }return false;
     }
-    public int[] getSumOfEvensAndOdds(int[] input) {
-
-        int x[] = input;
-        int even = 0;
-        for (int i = 0; i < x.length; i++) {
-            if (x[i] % 2 == 0)
-                even += x[i];
+    public int getPositionInArray(int[] Numbers, int nr) {
+        for (int i = 0; i < Numbers.length; i++) {
+            if (Numbers[i] == nr) {
+                return i;
+            }
         }
-        return x;
+        return 0;
+    }
+    public void showLines() {
+        String[] line = {"-", "-", "-", "-", "-", "-", "-", "-", "-", "-",};
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(Arrays.toString(line));
+        }
+    }
+    public int[] removeFromArray(int[] myArray, int nr) {
+        int[] secondArray = new int[myArray.length];
+        int j = 0;
+        for (int i = 0; i < myArray.length; i++) {
+            if (myArray[i] == nr)
+                continue;
+            secondArray[j++] = myArray[i];
+        }
+        int[] finArray = new int[j];
+        for (int i = 0; i < j; i++)
+            finArray[i] = secondArray[i];
+        return finArray;
+    }
+    public int getSecondSmallestNrInArray(int[] myArray) {
+        int temp = 0;
+        for(int i = 0; i< myArray.length;i++){
+            for(int j = i + 1;j<myArray.length;j++){
+                if(myArray[i] > myArray[j]){
+                    temp = myArray[j];
+                    myArray[j] = myArray[i];
+                    myArray[i] = temp;
+                }
+            }
+        }
+        return myArray[1];
     }
 
+    public int[] copyArray(int[] firstArray, int[] emptyArray) {
+        for (int i = 0, j = 0; i < firstArray.length; i++) {
+            emptyArray[j] = firstArray[i];
+            j++;
+        }
+        return emptyArray;
+    }
+
+    ////////////// LAB 14
     public void printNumbersBackwardsFromList(List<Integer> myList){
         for (int i = myList.size()-1;i>=0;i--){
             System.out.println(myList.get(i));

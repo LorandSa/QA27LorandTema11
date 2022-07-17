@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+// LAB 14 Liste
 public class Main4 {
     public static void main(String[] args) {
         List <Integer> myList = new ArrayList<>();
@@ -20,9 +21,12 @@ public class Main4 {
         }
 
         LogicalOp op = new LogicalOp();
-        //op.printNumbersBackwardsFromList(myListOfInt);
-        //op.twoParameters(myListOfInt,6); //1.Tema
-        //op.printNumbersFromList(myListOfInt); //2.Tema
+
+        op.twoParameters(myListOfInt,6); //1.Tema
+        op.printNumbersFromList(myListOfInt); //2.Tema
         op.twoParametersFromList(myListOfInt,5); //3. Tema
+        op.printNumbersBackwardsFromList(myListOfInt); //4. Tema
+        op.replacePositionInListWithString(myListOfString,5,"brb"); //5. Tema
+        op.secondParameterAddOnFirstPosition(myListOfInt,7); //6. Tema
     }
 }

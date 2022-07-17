@@ -290,4 +290,13 @@ public class LogicalOp
             System.out.println(myList.get(i));
         }
     }
+
+    public void replacePositionInListWithString (List<String> myList, int a, String text){
+        myList.set(a-1,text);
+        System.out.println(myList);
+    }
+    public void secondParameterAddOnFirstPosition (List<Integer> myList, int a){
+        myList.add(0,a);
+        System.out.println(myList);
+    }
 }

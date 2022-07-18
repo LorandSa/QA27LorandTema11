@@ -28,5 +28,7 @@ public class Main4 {
         op.printNumbersBackwardsFromList(myListOfInt); //4. Tema
         op.replacePositionInListWithString(myListOfString,5,"brb"); //5. Tema
         op.secondParameterAddOnFirstPosition(myListOfInt,7); //6. Tema
+        op.printListIndexAndElements(myListOfInt); //7. Tema
+        System.out.println(op.getBiggestValueFromList(myListOfInt)); //8. Tema
     }
 }

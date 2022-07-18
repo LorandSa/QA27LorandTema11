@@ -299,4 +299,17 @@ public class LogicalOp
         myList.add(0,a);
         System.out.println(myList);
     }
+    public void printListIndexAndElements(List<Integer> myList){
+        for (int i = 0; i<myList.size(); i++)
+            System.out.println("Index "+i+" are elementul "+myList.get(i));
+    }
+    public int getBiggestValueFromList (List<Integer> myList){
+        int biggest = myList.get(0);
+        for (int i=0 ; i<myList.size(); i++){
+            if (myList.get(i)>biggest){
+                biggest = myList.get(i);
+            }
+        }
+        return biggest;
+    }
 }
